@@ -1,5 +1,8 @@
 
 let switchPlayer = true;
+//initialise game
+//player turn one
+//
 
 const board = ['','','','','','','','',''];
 
@@ -12,13 +15,20 @@ const playerTwo = function(index) {
 }
 
 const playTurn = function(index) {
+
   if (switchPlayer === true) {
     playerOne(index);
     switchPlayer = false;
+
+
   } else {
     playerTwo(index);
     switchPlayer = true;
+
   };
+
+  // renderBoardToScreen()
+  checkForMatch()
 }
 
 const checkForMatch = function() {
@@ -59,7 +69,7 @@ $(document).ready(function() {
 
 
 $("#1").click(function() {
-  $(this).html("X");
+  playTurn(0)
 });
 
 $("#2").click(function() {
