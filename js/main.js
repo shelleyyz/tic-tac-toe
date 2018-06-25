@@ -22,9 +22,38 @@ const playTurn = function(index) {
 }
 
 const checkForMatch = function() {
+  if (board[0] === board[1] && board[1] === board[2]) {
+    console.log("you've won the game");
+  }
 
-}
+  if (board[3] === board[4] && board[4] === board[5]) {
+    console.log("you've won the game");
+  }
 
+  if (board[6] === board[7] && board[7] === board[8]) {
+    console.log("you've won the game");
+  }
+
+  if (board[0] === board[3] && board[3] === board[6]) {
+    console.log("you've won the game");
+  }
+
+  if (board[1] === board[4] && board[4] === board[7]) {
+    console.log("you've won the game");
+  }
+
+  if (board[2] === board[5] && board[5] === board[8]) {
+    console.log("you've won the game");
+  }
+
+  if (board[0] === board[4] && board[4] === board[8]) {
+    console.log("you've won the game");
+  }
+
+  if (board[2] === board[4] && board[4] === board[6]) {
+    console.log("you've won the game");
+  }
+};
 
 $(document).ready(function() {
 
