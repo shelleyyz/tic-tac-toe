@@ -1,0 +1,17 @@
+#container {
+  margin: 0 auto;
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.gameboard {
+  display: grid;
+  grid-template-columns: 200px 200px 200px; /*1st column, 2nd column, 3rd column width*/
+  grid-template-rows: 200px 200px 200px;
+}
+
+.box {
+  border: 5px solid rgb(212, 101, 230);
+}
