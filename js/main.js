@@ -3,22 +3,18 @@
 // A player can click on an empty box in the grid. If the player forms a row (either column or diagonal), that player wins and the game ends. If the grid is full with no rows/columns/diagonal of the same letter, the game is a draw. A player should try to win with the lowest number of moves.
 
 
-//create function for user clicking a cell
-//create function to check for match & game over
+//Draw board
+//track player (whose turn it is)
+//Figure out win
+//Reset game
 
-console.log('testing');
+
 
 let switchPlayer = true;
 
-const board = [0,0,0,0,0,0,0,0,0];
-//Initiate the game
+const board = ['','','','','','','','',''];
 
-
-
-//Keep track of whose turn it is
-
-//Create players
-
+//
 
 const playerOne = function(index) {
   board[index] = "X";
@@ -38,19 +34,42 @@ const playTurn = function(index) {
   };
 }
 
-//create function to check whether a player has won
-//create a function for when a cell is clicked
-//create a function for restart the game
-//create a function to load the game up
-
-const checkForMatch = function() {
-
-}
-
-//create function to check whether
+// const checkForMatch = function() {
+//   console.log("X");
+//   console.log("O");
 //
-// $(document).ready(function() {
-//
-//
-//
+//   if (board[0] === 'X' && board[])
 // }
+
+$(document).ready(function() {
+
+$("#1").click(function() {
+  $(this).html("X");
+});
+
+$("#2").click(function() {
+  $(this).html("X");
+});
+$("#3").click(function() {
+  $(this).html("X");
+});
+$("#4").click(function() {
+  $(this).html("X");
+});
+$("#5").click(function() {
+  $(this).html("X");
+});
+$("#6").click(function() {
+  $(this).html("X");
+});
+$("#7").click(function() {
+  $(this).html("X");
+});
+$("#8").click(function() {
+  $(this).html("X");
+});
+$("#9").click(function() {
+  $(this).html("X");
+});
+
+});
