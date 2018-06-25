@@ -8,13 +8,9 @@
 //Figure out win
 //Reset game
 
-
-
 let switchPlayer = true;
 
 const board = ['','','','','','','','',''];
-
-//
 
 const playerOne = function(index) {
   board[index] = "X";
@@ -34,14 +30,15 @@ const playTurn = function(index) {
   };
 }
 
-// const checkForMatch = function() {
-//   console.log("X");
-//   console.log("O");
-//
-//   if (board[0] === 'X' && board[])
-// }
+
 
 $(document).ready(function() {
+
+
+const checkForMatch = function() {
+
+}
+
 
 $("#1").click(function() {
   $(this).html("X");
@@ -50,24 +47,31 @@ $("#1").click(function() {
 $("#2").click(function() {
   $(this).html("X");
 });
+
 $("#3").click(function() {
   $(this).html("X");
 });
+
 $("#4").click(function() {
   $(this).html("X");
 });
+
 $("#5").click(function() {
   $(this).html("X");
 });
+
 $("#6").click(function() {
   $(this).html("X");
 });
+
 $("#7").click(function() {
   $(this).html("X");
 });
+
 $("#8").click(function() {
   $(this).html("X");
 });
+
 $("#9").click(function() {
   $(this).html("X");
 });
