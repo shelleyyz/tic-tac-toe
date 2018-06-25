@@ -3,8 +3,16 @@
   max-width: 960px;
   display: flex;
   justify-content: center;
-
 }
+
+body {
+  text-align: center;
+}
+
+p {
+  font-size: 15pt;
+}
+
 
 .gameboard {
   display: grid;
@@ -14,4 +22,17 @@
 
 .box {
   border: 5px solid rgb(212, 101, 230);
+  font-size: 40pt;
+  padding-top: 50px;
+  margin: 5px 5px 0 0;
+}
+
+button {
+  margin: 20px 0 20px 0;
+  background: #eb94d0;
+  border-radius: 28px;
+  font-family: Arial;
+  font-size: 15px;
+  color: #fafafa;
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%)
 }
