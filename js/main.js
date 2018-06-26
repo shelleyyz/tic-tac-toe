@@ -33,21 +33,23 @@ const playerTwo = function(index) {
 //event listener for button, create function to switch player using global variable
 
 const playTurn = function(index) {
+    if (board[index] === " ") { //cell must be empty before inputting a value
 
-  if (switchPlayer === true) {
-    playerOne(index);
-    switchPlayer = false;
-    counter = counter + 1;
+    if (switchPlayer === true) {
+      playerOne(index);
+      switchPlayer = false;
+      counter = counter + 1;
 
-  } else {
-    playerTwo(index);
-    switchPlayer = true;
-    counter = counter + 1;
+    } else {
+      playerTwo(index);
+      switchPlayer = true;
+      counter = counter + 1;
 
-  };
-  renderBoardToScreen();
-  checkForMatch();
-}
+    };
+    renderBoardToScreen();
+    checkForMatch();
+  }
+};
 
 const checkForMatch = function() {
   if (board[0] === board[1] && board[1] === board[2] && board[0] !== " ") {
@@ -77,8 +79,13 @@ $(document).ready(function() {
 
 $('.box').click(function() {
   boxId = event.target.id; //returns a number
-  playTurn(boxId);
+  playTurn(boxId); //order
 })
+
+// $('#select0').click(function()
+//
+//
+// )
 
 // old code
 // $("#0").click(function() {
