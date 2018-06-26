@@ -2,6 +2,8 @@
 let switchPlayer = true; //rename
 let counter = 0;
 let boxId = 0;
+let gameOver = false;
+
 
 const board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
 
@@ -51,26 +53,41 @@ const playTurn = function(index) {
   }
 };
 
+const restart = function() {
+  if (gameOver = true) {
+
+  }
+}
+
 const checkForMatch = function() {
   if (board[0] === board[1] && board[1] === board[2] && board[0] !== " ") {
-    alert("you've won the game");
+    alert(`Player ${board[0]} has won!`);
+    return true
   } else if (board[3] === board[4] && board[4] === board[5] && board[3] !== " ") {
-    alert("you've won the game");
+    alert(`Player ${board[3]} has won!`);
+    return true;
   } else if (board[6] === board[7] && board[7] === board[8] && board[6] !== " ") {
-    alert("you've won the game");
+    alert(`Player ${board[6]} has won!`);
+    return true;
   } else if (board[0] === board[3] && board[3] === board[6] && board[0] !== " ") {
-    alert("you've won the game");
+    alert(`Player ${board[0]} has won!`);
+    return true;
   } else if (board[1] === board[4] && board[4] === board[7] && board[1] !== " ") {
-    alert("you've won the game");
+    alert(`Player ${board[1]} has won!`);
+    return true;
   } else if (board[2] === board[5] && board[5] === board[8] && board[2] !== " ") {
-    alert("you've won the game");
+    alert(`Player ${board[2]} has won!`);
+    return true;
   } else if (board[0] === board[4] && board[4] === board[8] && board[0] !== " ") {
-    alert("you've won the game");
+    alert(`Player ${board[0]} has won!`);
+    return true;
   } else if (board[2] === board[4] && board[4] === board[6] && board[2] !== " ") {
-    alert("you've won the game");
-  } else if (counter === 9) {
-    alert("It's a draw");
-  }
+    alert(`Player ${board[2]} has won!`);
+    return true;
+  } else if (counter > 8) {
+    alert("The game is a draw");
+    return true;
+  };
 };
 
 $(document).ready(function() {
