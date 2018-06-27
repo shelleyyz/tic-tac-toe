@@ -52,55 +52,65 @@ const playTurn = function(index) {
 
 const checkForMatch = function() {
   if (board[0] === board[1] && board[1] === board[2] && board[0] !== " ") {
-    $('#playerWon').html(`${board[0]} has won!`)
+    $('#playerWon').html(`${board[0]} has won! Pls restart`)
+    $('.box').off("click");
     return true
   } else if (board[3] === board[4] && board[4] === board[5] && board[3] !== " ") {
-    $('#playerWon').html(`${board[3]} has won!`)
+    $('#playerWon').html(`${board[3]} has won! Pls restart`)
+    $('.box').off("click");
     return true;
   } else if (board[6] === board[7] && board[7] === board[8] && board[6] !== " ") {
-    $('#playerWon').html(`${board[6]} has won!`)
+    $('#playerWon').html(`${board[6]} has won! Pls restart`)
+    $('.box').off("click");
     return true;
   } else if (board[0] === board[3] && board[3] === board[6] && board[0] !== " ") {
-    $('#playerWon').html(`${board[0]} has won!`)
+    $('#playerWon').html(`${board[0]} has won! Pls restart`)
+    $('.box').off("click");
     return true;
   } else if (board[1] === board[4] && board[4] === board[7] && board[1] !== " ") {
-    $('#playerWon').html(`${board[1]} has won!`)
+    $('#playerWon').html(`${board[1]} has won! Pls restart`)
+    $('.box').off("click");
     return true;
   } else if (board[2] === board[5] && board[5] === board[8] && board[2] !== " ") {
-    $('#playerWon').html(`${board[2]} has won!`)
+    $('#playerWon').html(`${board[2]} has won! Pls restart`)
+    $('.box').off("click");
     return true;
   } else if (board[0] === board[4] && board[4] === board[8] && board[0] !== " ") {
-    $('#playerWon').html(`${board[0]} has won!`)
+    $('#playerWon').html(`${board[0]} has won! Pls restart`)
+    $('.box').off("click");
     return true;
   } else if (board[2] === board[4] && board[4] === board[6] && board[2] !== " ") {
-    $('#playerWon').html(`${board[2]} has won!`)
+    $('#playerWon').html(`${board[2]} has won! Pls restart`)
+    $('.box').off("click");
     return true;
   } else if (counter > 8) {
-    $('#playerWon').html("The game is a draw");
+    $('#playerWon').html("The game is a draw. Pls restart");
+    $('.box').off("click");
     return true;
   }
 };
 
 const reset = function() {
-  // console.log(counter);
-  // if (checkForMatch() === true) {
     for (let i = 0; i < board.length; i++) {
     board[i] = " ";
     counter = 0;
     $('#playerWon').html(" ");
   }
   renderBoardToScreen();
+  $('.box').click(function() {
+    boxId = event.target.id;
+    playTurn(boxId);
+  });
 };
 
 $(document).ready(function() {
 
   $('.box').click(function() {
-    boxId = event.target.id; //returns a number
+    boxId = event.target.id;
     playTurn(boxId);
   });
 
-  $('#reset').on('click',function() {
+  $('#reset').click(function() {
     reset();
   });
-
 }); //end doc ready
