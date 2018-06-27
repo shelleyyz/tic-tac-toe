@@ -21,6 +21,11 @@ p {
 }
 
 
+#playerWon {
+  font-size: 30pt;
+}
+
+
 .gameboard {
   display: grid;
   grid-template-columns: 200px 200px 200px; /*1st column, 2nd column, 3rd column width*/

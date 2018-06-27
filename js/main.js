@@ -2,8 +2,6 @@
 let switchPlayer = true; //rename
 let counter = 0;
 let boxId = 0;
-let gameOver = false;
-
 
 const board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
 
@@ -21,7 +19,6 @@ const renderBoardToScreen = function() { //loop
   $('#7').html(board[7]);
   $('#8').html(board[8]);
 };
-
 //div z-index (zooming)
 
 const playerOne = function(index) {
@@ -31,6 +28,7 @@ const playerOne = function(index) {
 const playerTwo = function(index) {
   board[index] = "O";
 }
+
 
 //event listener for button, create function to switch player using global variable
 
@@ -49,96 +47,54 @@ const playTurn = function(index) {
 
     };
     renderBoardToScreen();
-    checkForMatch();
+    gameOver();
   }
 };
 
-const restart = function() {
-  if (gameOver = true) {
-
-  }
-}
-
 const checkForMatch = function() {
   if (board[0] === board[1] && board[1] === board[2] && board[0] !== " ") {
-    alert(`Player ${board[0]} has won!`);
+    $('#playerWon').html(`Player ${board[0]} has won! Next turn will refresh.`);
     return true
   } else if (board[3] === board[4] && board[4] === board[5] && board[3] !== " ") {
-    alert(`Player ${board[3]} has won!`);
+    $('#playerWon').html(`Player ${board[3]} has won! Next turn will refresh.`);
     return true;
   } else if (board[6] === board[7] && board[7] === board[8] && board[6] !== " ") {
-    alert(`Player ${board[6]} has won!`);
+    $('#playerWon').html(`Player ${board[6]} has won! Next turn will refresh.`);
     return true;
   } else if (board[0] === board[3] && board[3] === board[6] && board[0] !== " ") {
-    alert(`Player ${board[0]} has won!`);
+    $('#playerWon').html(`Player ${board[0]} has won! Next turn will refresh.`);
     return true;
   } else if (board[1] === board[4] && board[4] === board[7] && board[1] !== " ") {
-    alert(`Player ${board[1]} has won!`);
+    $('#playerWon').html(`Player ${board[1]} has won! Next turn will refresh.`);
     return true;
   } else if (board[2] === board[5] && board[5] === board[8] && board[2] !== " ") {
-    alert(`Player ${board[2]} has won!`);
+    $('#playerWon').html(`Player ${board[2]} has won! Next turn will refresh.`);
     return true;
   } else if (board[0] === board[4] && board[4] === board[8] && board[0] !== " ") {
-    alert(`Player ${board[0]} has won!`);
+    $('#playerWon').html(`Player ${board[0]} has won! Next turn will refresh.`);
     return true;
   } else if (board[2] === board[4] && board[4] === board[6] && board[2] !== " ") {
-    alert(`Player ${board[2]} has won!`);
+    $('#playerWon').html(`Player ${board[2]} has won! Next turn will refresh.`);
     return true;
   } else if (counter > 8) {
-    alert("The game is a draw");
+    $('#playerWon').html("The game is a draw");
     return true;
   };
 };
 
+const gameOver = function() {
+  if (checkForMatch() === true) {
+    for (let i = 0; i < board.length; i++) {
+      board[i] = " ";
+    }
+    counter = 0;
+  }
+};
+
 $(document).ready(function() {
 
-  //loop or gridcontainer (target)
-
-$('.box').click(function() {
-  boxId = event.target.id; //returns a number
-  playTurn(boxId); //order
-})
-
-// $('#select0').click(function()
-//
-//
-// )
-
-// old code
-// $("#0").click(function() {
-//   playTurn(0);
-// });
-//
-// $("#1").click(function() {
-//   playTurn(1);
-// });
-//
-// $("#2").click(function() {
-//   playTurn(2);
-// });
-//
-// $("#3").click(function() {
-//   playTurn(3);
-// });
-//
-// $("#4").click(function() {
-//   playTurn(4);
-// });
-//
-// $("#5").click(function() {
-//   playTurn(5);
-// });
-//
-// $("#6").click(function() {
-//   playTurn(6);
-// });
-//
-// $("#7").click(function() {
-//   playTurn(7);
-// });
-//
-// $("#8").click(function() {
-//   playTurn(8);
-// });
-
+  $('.box').click(function() {
+    boxId = event.target.id; //returns a number
+    playTurn(boxId);
+  });
 });
