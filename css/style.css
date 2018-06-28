@@ -8,33 +8,7 @@ body {
 	color: #fff;
 	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
 	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
-}
-
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
 }
 
 @keyframes Gradient {
@@ -78,7 +52,7 @@ body {
 
 .gameboard {
   display: grid;
-  grid-template-columns: 12em 12em 12em; /*1st column, 2nd column, 3rd column width*/
+  grid-template-columns: 12em 12em 12em;
   grid-template-rows: 12em 12em 12em;
 }
 
@@ -95,7 +69,7 @@ body {
   margin-top: 30%;
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
   .gameboard {
   display: grid;
   grid-template-columns: 5em 5em 5em;
@@ -108,24 +82,9 @@ body {
 
   .playerWon {
     font-size: 10px;
-    background-color: #33ccff;
     color: yellow;
-    /* padding: 20px 0 20px 0; */
   }
-
-    button {
-      margin: 10px 0 10px 0;
-      background: #eb94d0;
-      border-radius: 20px;
-      font-family: 'Black Ops One', cursive;
-      font-size: 20px;
-      width: 200px;
-      height: 90px;
-      color: yellow;
-      background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%)
-    }
 }
-
 
 button {
   margin: 10px 0 10px 0;
