@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Black+Ops+One');
 
 body {
+  font-family: 'Black Ops One', cursive;
   text-align: center;
   width: 100wh;
 	height: 90vh;
@@ -56,7 +57,7 @@ body {
   padding-top: 35vh;
   background-color: rgba(255, 255, 255, 0.7);
   width: 100%;
-  height: 100%;
+  height: 55%;
   margin-left: 75px;
   display: none;
 }
@@ -68,20 +69,11 @@ body {
   justify-content: center;
 }
 
-h1 {
-  font-family: 'Black Ops One', cursive;
-  font-size: 30px;
-}
-
-p {
-  font-size: 10px;
-  font-family: 'Black Ops One', cursive;
-
-}
-
 .playerWon {
-  font-size: 20px;
+  font-size: 30px;
   background-color: #33ccff;
+  color: yellow;
+  padding: 20px 0 20px 0;
 }
 
 .gameboard {
@@ -113,16 +105,36 @@ p {
   .box p {
     margin-top: 4%;
   }
+
+  .playerWon {
+    font-size: 10px;
+    background-color: #33ccff;
+    color: yellow;
+    /* padding: 20px 0 20px 0; */
+  }
+
+    button {
+      margin: 10px 0 10px 0;
+      background: #eb94d0;
+      border-radius: 20px;
+      font-family: 'Black Ops One', cursive;
+      font-size: 20px;
+      width: 200px;
+      height: 90px;
+      color: yellow;
+      background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%)
+    }
 }
+
 
 button {
   margin: 10px 0 10px 0;
   background: #eb94d0;
-  /* border-radius: 50px; */
-  font-family: Arial;
-  font-size: 15px;
+  border-radius: 20px;
+  font-family: 'Black Ops One', cursive;
+  font-size: 20px;
   width: 200px;
-  height: 100px;
-  color: #fafafa;
+  height: 90px;
+  color: yellow;
   background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%)
 }
