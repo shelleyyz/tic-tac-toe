@@ -1,5 +1,66 @@
 @import url('https://fonts.googleapis.com/css?family=Black+Ops+One');
 
+body {
+  text-align: center;
+  width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.popup {
+  position: absolute;
+  left: -74px;
+  top: 78px;
+  text-align: center;
+  padding-top: 35vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 100%;
+  margin-left: 75px;
+  display: none;
+}
+
 #container {
   margin: 0 auto;
   max-width: 960px;
@@ -7,46 +68,61 @@
   justify-content: center;
 }
 
-body {
-  text-align: center;
-  background-color: rgb(217, 221, 238)
-}
-
 h1 {
   font-family: 'Black Ops One', cursive;
+  font-size: 30px;
 }
 
 p {
-  font-size: 15pt;
+  font-size: 10px;
+  font-family: 'Black Ops One', cursive;
+
 }
 
-
-#playerWon {
-  font-size: 30pt;
+.playerWon {
+  font-size: 20px;
+  background-color: #33ccff;
 }
 
 .gameboard {
   display: grid;
-  grid-template-columns: 200px 200px 200px; /*1st column, 2nd column, 3rd column width*/
-  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 12em 12em 12em; /*1st column, 2nd column, 3rd column width*/
+  grid-template-rows: 12em 12em 12em;
 }
 
 .box {
   border: 5px solid rgb(212, 101, 230);
   cursor: pointer;
-  margin: 5px 5px 0 0;
+  text-align: center;
+  justify-content: center;
 }
 
 .box p {
-  font-size: 40pt;
+  font-size: 50px;
+  padding-top: 10px;
+  margin-top: 30%;
+}
+
+@media (max-width: 500px){
+  .gameboard {
+  display: grid;
+  grid-template-columns: 5em 5em 5em;
+  grid-template-rows: 5em 5em 5em
+  }
+
+  .box p {
+    margin-top: 4%;
+  }
 }
 
 button {
   margin: 10px 0 10px 0;
   background: #eb94d0;
-  border-radius: 28px;
+  /* border-radius: 50px; */
   font-family: Arial;
   font-size: 15px;
+  width: 200px;
+  height: 100px;
   color: #fafafa;
   background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%)
 }
