@@ -25,7 +25,6 @@ p {
   font-size: 30pt;
 }
 
-
 .gameboard {
   display: grid;
   grid-template-columns: 200px 200px 200px; /*1st column, 2nd column, 3rd column width*/
@@ -34,10 +33,12 @@ p {
 
 .box {
   border: 5px solid rgb(212, 101, 230);
-  font-size: 40pt;
-  padding-top: 50px;
-  margin: 5px 5px 0 0;
   cursor: pointer;
+  margin: 5px 5px 0 0;
+}
+
+.box p {
+  font-size: 40pt;
 }
 
 button {

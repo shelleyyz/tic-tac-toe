@@ -7,22 +7,27 @@ const board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
 
 // Using html() method to set the contents of all elements with the corresponding ID with the values from board array
 
-const renderBoardToScreen = function() { //loop
-  $('#0').html(board[0]);
-  $('#1').html(board[1]);
-  $('#2').html(board[2]);
-  $('#3').html(board[3]);
-  $('#4').html(board[4]);
-  $('#5').html(board[5]);
-  $('#6').html(board[6]);
-  $('#7').html(board[7]);
-  $('#8').html(board[8]);
+const renderBoardToScreen = function(last) { //loop
+  // $('#0').html(board[0])
+  // $('#0').html("<p>" + (board[0]) + "</p>");
+  // $('#1').html("<p>" + (board[1]) + "</p>");
+  // $('#2').html("<p>" + (board[2]) + "</p>");
+  //
+  //
+  // // $('#2').html(board[2]);
+  // $('#3').html(board[3]);
+  // $('#4').html(board[4]);
+  // $('#5').html(board[5]);
+  // $('#6').html(board[6]);
+  // $('#7').html(board[7]);
+  // $('#8').html(board[8]);
+
+  $(`#${last}`).html("<p>" + (board[last]) + "</p>");
+  $(`#${last} p`).hide().fadeIn(1000);
+  console.log('testing render');
 };
 
 //local storage
-const dialog = function() {
-  $('#playerOne').dialog();
-}
 
 const playerOne = function(index) {
   board[index] = "X";
@@ -46,7 +51,7 @@ const playTurn = function(index) {
     };
     counter = counter + 1;
     checkForMatch();
-    renderBoardToScreen();
+    renderBoardToScreen(index); //grabbing the last turn
   }
 };
 
@@ -95,8 +100,10 @@ const reset = function() {
     board[i] = " ";
     counter = 0;
     $('#playerWon').html(" ");
+    console.log('testing');
+    renderBoardToScreen(i);
   }
-  renderBoardToScreen();
+
   $('.box').click(function() {
     boxId = event.target.id;
     playTurn(boxId);
@@ -114,3 +121,5 @@ $(document).ready(function() {
     reset();
   });
 }); //end doc ready
+
+//document.cookie (running with http using github pages)
