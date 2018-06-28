@@ -1,10 +1,10 @@
 
-let nextPlayerTurn = true; //rename
+let nextPlayerTurn = true;
 let turnCounter = 0;
 let boxId = 0;
 const board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
 
-const renderBoardToScreen = function(boxId) { //loop
+const renderBoardToScreen = function(boxId) { 
   $(`#${boxId}`).html("<p>" + (board[boxId]) + "</p>");
   $(`#${boxId} p`).hide().fadeIn(1000);
 };
@@ -110,5 +110,3 @@ $(document).ready(function() {
     reset();
   });
 }); //end doc ready
-
-//document.cookie (running with http using github pages)

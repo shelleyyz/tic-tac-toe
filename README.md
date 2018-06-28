@@ -2,37 +2,26 @@
 
 ## Tic Tac Toe
 
-### Subheadings
-
-Alternative Subheadings
+About the Project
 ------------------------
+[Here is the live site](https://shelleyyz.github.io/tic-tac-toe/)
+This is the first game I've ever programmed and tested my skills in the below fundamentals of programming:
 
-Lorem ipsum *dolor* sit **amet**, ***consectetur*** adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- Command line
+- Source control
+- Deployment
 
-## Lists
+It's a simple two player game of TicTacToe built with HTML, CSS, Javascript and the jQuery library.
 
-1. Cat
-1. Dog
-1. Fish
-1. Horse
+The basic requirement is to have the game switch turns between X and 0 and visually displays which side won if a player gets three in a row or a draw is found. 
 
-- Audrey
-- Cooper
-* Audrey
-* Cooper
+Bonus functionality:
+- Animations including an looping gradient background
+- Fade in and fade out of player icons
+- Modal displaying which player has won and a restart button
 
-# Link to the live site
-
-https://shelleyyz.github.io/tic-tac-toe/
-
-[here is the live site](https://shelleyyz.github.io/tic-tac-toe/)
-
-The `<blink>` tag is no good
-
-The `alert` tag is no good
-
-```js
-const hello = function() {
-  blah
-}
-```
+Future improvements:
+- Review code and make it DRYer
+- LocalStorage
+- Win counter
+- Ability for players to customise their tokens
