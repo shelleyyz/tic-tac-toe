@@ -24,5 +24,4 @@ Bonus functionality:
 Future improvements:
 - Review code and make it DRYer
 - LocalStorage
-- Win counter
 - Ability for players to customise their tokens
