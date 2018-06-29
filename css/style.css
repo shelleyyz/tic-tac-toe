@@ -23,9 +23,12 @@ body {
 	}
 }
 
-/*linear gradient - colours flow in a single direction at any angle. (angle it is turning, colours to change through from the first colour to the end colour). Linear gradients cannot be animated like colours can as they are considered images. Here I am transitioning the position of the image. The gradient as defined by the keyframe should go from one colour to another colour, then back again. the background-size is at 400% to make sure that the 'image' covers both ends of the animation. 
+/*linear gradient - colours flow in a single direction at any angle. (angle it is turning, colours to change through from the first colour to the end colour). Linear gradients cannot be animated like colours can as they are considered images. Here I am transitioning the position of the image. The gradient as defined by the keyframe should go from one colour to another colour, then back again. the background-size is at 400% to make sure that the 'image' covers both ends of the animation.
 */
 
+.counter {
+  color: yellow;
+}
 
 .popup {
   position: absolute;
